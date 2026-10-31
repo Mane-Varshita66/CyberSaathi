@@ -1,100 +1,589 @@
-CyberSaathi – Cyber Awareness and Safety Platform
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberSaathi - Cyber Awareness</title>
 
-1. Project Overview
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-CyberSaathi is a web-based cyber awareness platform designed to educate people about cybercrime and online safety. It helps users understand different types of cyber threats and learn how to stay safe online.
+body {
+    background: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
 
-The platform provides cyber safety tips, information about common cybercrimes, and guidance on reporting cybercrime.
+header {
+    background: #071b3a;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
 
-2. Problem Statement
+header h1 {
+    color: #38bdf8;
+}
 
-Nowadays, many people become victims of cybercrime because of a lack of awareness about online threats.
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+    font-weight: bold;
+}
 
-Common problems include:
+nav a:hover {
+    color: #38bdf8;
+}
 
-- Online financial fraud
-- Phishing attacks
-- Fake websites and links
-- Social media scams
-- Identity theft
-- OTP fraud
+.hero {
+    background: linear-gradient(120deg, #071b3a, #075985);
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+}
 
-Many users do not know how to identify these threats or report cybercrime.
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
 
-3. Proposed Solution
+.hero p {
+    max-width: 700px;
+    margin: auto;
+}
 
-CyberSaathi provides a simple and user-friendly platform that spreads awareness about cybercrime.
+section {
+    padding: 55px 8%;
+}
 
-It helps users:
+.section-title {
+    text-align: center;
+    color: #075985;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
 
-- Understand different cyber threats.
-- Identify suspicious messages and links.
-- Learn online safety practices.
-- Get information about cybercrime reporting.
-- Access useful cyber safety resources.
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
 
-4. Objectives
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000012;
+    border-top: 4px solid #0284c7;
+}
 
-- Increase cybercrime awareness.
-- Promote safe internet usage.
-- Educate users about online fraud.
-- Help users recognize cyber threats.
-- Provide guidance for reporting cybercrime.
+.card h3 {
+    color: #075985;
+    margin-bottom: 10px;
+}
 
-5. Key Features
+.problem {
+    background: #e0f2fe;
+}
 
-1. Home Page – Introduction to CyberSaathi.
-2. Cyber Awareness – Information about cyber threats.
-3. Safety Tips – Important online safety guidelines.
-4. Scam Awareness – Information about common online scams.
-5. Report Cybercrime – Provides access to official cybercrime reporting resources.
-6. Contact Section – Provides platform-related information.
+.solution {
+    background: #f8fafc;
+}
 
-6. Technologies Used
+.steps {
+    background: #e0f2fe;
+}
 
-- HTML – Structure of the website.
-- CSS – Styling and layout.
-- JavaScript – Interactive functionality.
+.steps li {
+    margin: 12px 0;
+}
 
-7. Project Structure
+.form-section {
+    background: white;
+}
 
-CyberSaathi/
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
+form {
+    max-width: 750px;
+    margin: auto;
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+}
 
-8. Installation and Execution
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
 
-1. Download or clone the project.
-2. Open the CyberSaathi project folder.
-3. Open the folder in Visual Studio Code.
-4. Open "index.html".
-5. Run the website using Live Server or a browser.
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
 
-9. Official Cybercrime Reporting
+textarea {
+    resize: vertical;
+}
 
-Users in India can report cybercrime through:
+button {
+    background: #0284c7;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 12px 5px 0 0;
+    font-size: 15px;
+}
 
+button:hover {
+    background: #075985;
+}
+
+.danger {
+    background: #dc2626;
+}
+
+.preview {
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #e0f2fe;
+    border-radius: 10px;
+    display: none;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.official {
+    background: #071b3a;
+    color: white;
+    text-align: center;
+}
+
+.official h2 {
+    color: #38bdf8;
+}
+
+.official p {
+    margin: 15px 0;
+}
+
+.official a {
+    display: inline-block;
+    background: #0284c7;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin: 8px;
+}
+
+.official a:hover {
+    background: #0369a1;
+}
+
+footer {
+    background: #020617;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.note {
+    font-size: 14px;
+    color: #475569;
+    margin-top: 12px;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+    <h1>🛡 CyberSaathi</h1>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#problems">Problems</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#report">Report</a>
+        <a href="#official">Contact</a>
+    </nav>
+</header>
+
+
+<!-- HOME -->
+
+<div class="hero" id="home">
+
+    <h2>Stay Safe in the Digital World</h2>
+
+    <p>
+        CyberSaathi is a student cyber awareness platform
+        designed to educate people about online threats,
+        cybercrime prevention and safe internet usage.
+    </p>
+
+    <br>
+
+    <a href="#problems"
+       style="background:#38bdf8;color:#071b3a;
+       padding:13px 22px;border-radius:7px;
+       text-decoration:none;font-weight:bold;">
+       Explore Cyber Awareness
+    </a>
+
+</div>
+
+
+<!-- PROBLEMS -->
+
+<section class="problem" id="problems">
+
+<h2 class="section-title">Common Cybercrime Problems</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>🎣 Phishing Attacks</h3>
+        <p>
+            Fake emails and messages are used to
+            trick people into sharing personal information.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>💳 Online Payment Fraud</h3>
+        <p>
+            Fraudsters may trick people into making
+            unauthorized online payments.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🔐 Identity Theft</h3>
+        <p>
+            Someone misuses another person's
+            personal information without permission.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>📱 Social Media Scams</h3>
+        <p>
+            Fake profiles, suspicious links and
+            misleading offers can deceive users.
+        </p>
+    </div>
+
+</div>
+</section>
+
+
+<!-- SOLUTIONS -->
+
+<section class="solution" id="solutions">
+
+<h2 class="section-title">Cybercrime Prevention Solutions</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Strong Passwords</h3>
+        <p>
+            Create unique passwords for different
+            accounts and protect them.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Two-Factor Authentication</h3>
+        <p>
+            Enable two-factor authentication
+            to improve account security.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Avoid Suspicious Links</h3>
+        <p>
+            Never open unknown links or
+            download suspicious attachments.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Protect Personal Information</h3>
+        <p>
+            Never share passwords, OTPs or
+            confidential banking details.
+        </p>
+    </div>
+
+</div>
+</section>
+
+
+<!-- SAFETY STEPS -->
+
+<section class="steps">
+
+<h2 class="section-title">What to Do If You Face Cybercrime?</h2>
+
+<ol>
+    <li>Stay calm and stop interacting with the suspicious account.</li>
+    <li>Save relevant messages, screenshots and transaction records.</li>
+    <li>Contact your bank immediately if money is involved.</li>
+    <li>Change compromised passwords and secure your accounts.</li>
+    <li>Report financial cyber fraud by calling 1930 promptly.</li>
+    <li>Submit an official complaint at the National Cyber Crime Reporting Portal.</li>
+</ol>
+
+</section>
+
+
+<!-- COMPLAINT FORM -->
+
+<section class="form-section" id="report">
+
+<h2 class="section-title">Cybercrime Complaint Draft Form</h2>
+
+<form id="complaintForm">
+
+    <label>Your Name</label>
+    <input type="text" id="name"
+           placeholder="Enter your name" required>
+
+    <label>Email Address (optional)</label>
+    <input type="email" id="email"
+           placeholder="Enter your email">
+
+    <label>Cybercrime Type</label>
+
+    <select id="type" required>
+        <option value="">Select type</option>
+        <option>Phishing</option>
+        <option>Online Payment Fraud</option>
+        <option>Identity Theft</option>
+        <option>Social Media Scam</option>
+        <option>Other</option>
+    </select>
+
+    <label>Date of Incident</label>
+    <input type="date" id="date" required>
+
+    <label>Platform / Website (optional)</label>
+    <input type="text" id="platform"
+           placeholder="Enter website or platform">
+
+    <label>Description of Incident</label>
+    <textarea id="description" rows="5"
+              placeholder="Explain what happened..."
+              required></textarea>
+
+    <p class="note">
+        Privacy notice: This form creates a local draft only.
+        Do not enter passwords, OTPs, card numbers or banking credentials.
+        Your details are not sent to the government portal.
+    </p>
+
+    <button type="button" onclick="previewDraft()">
+        Preview Draft
+    </button>
+
+    <button type="button" onclick="downloadDraft()">
+        Download Draft (.txt)
+    </button>
+
+    <button type="reset" class="danger"
+            onclick="clearPreview()">
+        Clear Form
+    </button>
+
+</form>
+
+
+<div class="preview" id="preview">
+</div>
+
+</section>
+
+
+<!-- OFFICIAL REPORTING -->
+
+<section class="official" id="official">
+
+<h2>Continue to Official Reporting</h2>
+
+<p>
+To file an actual cybercrime complaint,
+visit the National Cyber Crime Reporting Portal.
+</p>
+
+<a href="https://cybercrime.gov.in/"
+   target="_blank"
+   rel="noopener noreferrer">
+   Open Official Cybercrime Portal ↗
+</a>
+
+<a href="tel:1930">
+   Call 1930 – Financial Cyber Fraud
+</a>
+
+<p class="note" style="color:#cbd5e1;">
+Your draft is not automatically transferred to the official portal.
+Review its contents and submit your complaint on the official website.
+</p>
+
+<p style="margin-top:20px;">
+CyberSaathi does not provide complaint tracking
+or a police complaint reference number.
+</p>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>© 2026 CyberSaathi | Student Cyber Awareness Project</p>
+
+<p>Think Before You Click. Stay Safe Online!</p>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function getComplaintText() {
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let type = document.getElementById("type").value;
+    let date = document.getElementById("date").value;
+    let platform = document.getElementById("platform").value.trim();
+    let description = document.getElementById("description").value.trim();
+
+    if (!name || !type || !date || !description) {
+        alert("Please fill all required fields.");
+        return null;
+    }
+
+    let draft = `
+CYBERSAATHI - CYBERCRIME COMPLAINT DRAFT
+
+Name: ${name}
+Email: ${email || "Not provided"}
+
+Cybercrime Type: ${type}
+Date of Incident: ${date}
+
+Platform / Website: ${platform || "Not provided"}
+
+Description:
+${description}
+
+IMPORTANT:
+This is a draft prepared using CyberSaathi.
+It is not an officially submitted complaint.
+
+Please review and submit it through:
 https://cybercrime.gov.in/
+`;
 
-Cybercrime helpline: 1930 (for reporting financial cyber fraud).
+    return draft;
+}
 
-10. Future Enhancements
 
-- AI-based scam detection.
-- Multilingual support.
-- Interactive cyber safety quizzes.
-- User login and registration.
-- Real-time scam alerts.
-- Chatbot for cyber safety guidance.
+function previewDraft() {
 
-11. Conclusion
+    let draft = getComplaintText();
 
-CyberSaathi aims to create a safer digital environment by spreading cyber awareness and educating users about online threats. It encourages responsible internet usage and helps people understand how to protect themselves from cybercrime.
+    if (draft === null) return;
 
-Project Name: CyberSaathi
-Category: Cyber Security and Awareness
-Project Type: Web Application
-Developed Using: HTML, CSS and JavaScript
+    let preview = document.getElementById("preview");
+
+    preview.style.display = "block";
+    preview.textContent = draft;
+
+    preview.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
+
+
+function downloadDraft() {
+
+    let draft = getComplaintText();
+
+    if (draft === null) return;
+
+    let blob = new Blob(
+        [draft],
+        { type: "text/plain;charset=utf-8" }
+    );
+
+    let url = URL.createObjectURL(blob);
+
+    let link = document.createElement("a");
+
+    link.href = url;
+    link.download = "CyberSaathi_Complaint_Draft.txt";
+
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    URL.revokeObjectURL(url);
+}
+
+
+function clearPreview() {
+
+    let preview = document.getElementById("preview");
+
+    preview.style.display = "none";
+    preview.textContent = "";
+
+}
+
+</script>
+
+</body>
+</html>
