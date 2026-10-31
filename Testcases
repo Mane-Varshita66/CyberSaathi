@@ -1,0 +1,28 @@
+CyberSaathi – Sample Data and Test Cases
+
+Purpose
+
+This document contains sample inputs and test cases used to evaluate the functionality of the CyberSaathi cyber safety application.
+
+Sample Data
+
+The application is tested using safe demonstration URLs, suspicious-pattern examples, invalid inputs, and empty inputs.
+
+Test Cases
+
+1. Suspicious URL detection – Expected: High-Risk Alert.
+2. Safe demonstration URL – Expected: Low-Risk Alert.
+3. Empty input – Expected: Validation message.
+4. Invalid URL – Expected: Invalid URL message.
+5. Check Safety button – Expected: Risk analysis executed.
+6. Clear button – Expected: Input and results cleared.
+7. Fake KYC-themed URL – Expected: High-Risk Alert.
+8. Prize scam-themed URL – Expected: High-Risk Alert.
+
+Testing Result
+
+The application is evaluated based on whether the displayed output matches the expected result for each test case.
+
+Disclaimer
+
+The sample URLs are intended for educational and demonstration purposes only. Risk alerts depend on the application's implemented detection rules and do not guarantee website safety.
